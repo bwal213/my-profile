@@ -16,10 +16,12 @@ pc = portal.Context()
 
 # Create a Request object to start building the RSpec.
 request = pc.makeRequestRSpec()
+
+XENVM = geni.rspec.igext.XenVM
  
 # Add a raw PC to the request.
 # node = request.VM("node_1")                                                       #Added by Ben Walker
-node = request.(geni.rspec.igext.XenVM("node_1"))                               #Added by Ben Walker
+node = request.XENVM("node_1")                               #Added by Ben Walker
 node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:CENTOS7-64-STD"   #Added by Ben Walker
 node.routable_control_ip = True                                                   #Added by Ben Walker
 
