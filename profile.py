@@ -21,6 +21,7 @@ request = pc.makeRequestRSpec()
 node = request.VM("node_1")
 # node = request.(geni.rspec.igext.XenVM)("node_1")
 node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:CENTOS7-64-STD"
+node.routable_control_ip = True
 
 # Install and execute a script that is contained in the repository.
 node.addService(pg.Execute(shell="sh", command="/local/repository/silly.sh"))
