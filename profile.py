@@ -11,13 +11,13 @@ import geni.portal as portal
 # Import the ProtoGENI library.
 import geni.rspec.pg as pg
 
+import geni.rspec.igext.XenVM as XENVM
+
 # Create a portal context.
 pc = portal.Context()
 
 # Create a Request object to start building the RSpec.
 request = pc.makeRequestRSpec()
-
-XENVM = geni.rspec.igext.XenVM
  
 # Add a raw PC to the request.
 # node = request.VM("node_1")                                                       #Added by Ben Walker
