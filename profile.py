@@ -11,7 +11,7 @@ import geni.portal as portal
 # Import the ProtoGENI library.
 import geni.rspec.pg as pg
 
-import geni.rspec.igext.XenVM as XENVM
+#import geni.rspec.igext.XenVM as XENVM
 
 # Create a portal context.
 pc = portal.Context()
@@ -21,7 +21,7 @@ request = pc.makeRequestRSpec()
  
 # Add a raw PC to the request.
 # node = request.VM("node_1")                                                       #Added by Ben Walker
-node = request.XENVM("node_1")                               #Added by Ben Walker
+node = request.geni.rspec.igext.XenVM("node_1")                               #Added by Ben Walker
 node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:CENTOS7-64-STD"   #Added by Ben Walker
 node.routable_control_ip = True                                                   #Added by Ben Walker
 
