@@ -18,10 +18,10 @@ pc = portal.Context()
 request = pc.makeRequestRSpec()
  
 # Add a raw PC to the request.
-node = request.VM("node_1")
-# node = request.(geni.rspec.igext.XenVM)("node_1")
-node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:CENTOS7-64-STD"
-node.routable_control_ip = True
+node = request.VM("node_1")                                                       #Added by Ben Walker
+# node = request.(geni.rspec.igext.XenVM)("node_1")                               #Added by Ben Walker
+node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:CENTOS7-64-STD"   #Added by Ben Walker
+node.routable_control_ip = True                                                   #Added by Ben Walker
 
 # Install and execute a script that is contained in the repository.
 node.addService(pg.Execute(shell="sh", command="/local/repository/silly.sh"))
